@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "unit-of-work"
+version = "0.1.0"
+description = ""
+authors = ["OlehDziuba <oleg_dzuba@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+asyncpg = "^0.30.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
