@@ -2,7 +2,7 @@ from types import TracebackType
 
 from asyncpg import Pool, Connection
 
-from unit_of_work.application import TransactionalRepository, UnitOfWork
+from unit_of_work.application import EventPublisher, TransactionalRepository, UnitOfWork
 from .transaction_adapter import AsyncpgTransactionAdapter
 
 
@@ -10,9 +10,10 @@ class AsyncpgUnitOfWork(UnitOfWork[AsyncpgTransactionAdapter]):
     def __init__(
             self,
             pool: Pool,
-            tracked_repositories: list[TransactionalRepository[AsyncpgTransactionAdapter]]
-    ):
-        super().__init__(tracked_repositories)
+            events_publisher: EventPublisher,
+            tracked_repositories: list[TransactionalRepository[AsyncpgTransactionAdapter]],
+    ) -> None:
+        super().__init__(events_publisher, tracked_repositories)
         self.__pool = pool
         self.__connection: Connection | None = None
 
