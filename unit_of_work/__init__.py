@@ -1,1 +1,1 @@
-from .application import Transaction
+from .application import Transaction, TransactionalRepository
