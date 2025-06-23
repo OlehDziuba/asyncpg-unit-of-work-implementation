@@ -12,7 +12,7 @@ class Entity:
     def __init__(self):
         self.__domain_events: list[DomainEvent] = []
 
-    def registrate_event(self, event: DomainEvent) -> None:
+    def _registrate_event(self, event: DomainEvent) -> None:
         self.__domain_events.append(event)
 
     def clear_events(self) -> None:
