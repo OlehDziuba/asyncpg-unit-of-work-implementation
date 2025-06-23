@@ -1,1 +1,1 @@
-from .application import Transaction, TransactionalRepository
+from .application import Transaction, TransactionalRepository, UnitOfWork
