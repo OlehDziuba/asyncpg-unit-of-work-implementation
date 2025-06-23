@@ -8,7 +8,7 @@ class DomainEvent:
     occurred_at: datetime
 
 
-class Entity:
+class AggregateRoot:
     def __init__(self):
         self.__domain_events: list[DomainEvent] = []
 
