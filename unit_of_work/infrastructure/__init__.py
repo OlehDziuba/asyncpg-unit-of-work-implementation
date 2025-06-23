@@ -1,1 +1,1 @@
-from .transaction_adapter import AsyncpgTransactionAdapter
+from unit_of_work.infrastructure.asyncpg import AsyncpgTransactionAdapter, AsyncpgUnitOfWork
