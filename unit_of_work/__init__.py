@@ -1,3 +1,3 @@
 from .application import Transaction, TransactionalRepository, UnitOfWork
-from .domain import Entity
+from .domain import Entity, DomainEvent
 from .infrastructure import AsyncpgTransactionAdapter
