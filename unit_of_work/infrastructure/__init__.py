@@ -1,1 +1,2 @@
 from unit_of_work.infrastructure.asyncpg import AsyncpgTransactionAdapter, AsyncpgUnitOfWork
+from .events_transport import EventsBus
