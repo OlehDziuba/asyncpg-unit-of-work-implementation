@@ -34,6 +34,8 @@ class UnitOfWork(abc.ABC, Generic[T]):
         else:
             await self.__transaction.commit()
 
+        self.__transaction = None
+
     @abc.abstractmethod
     async def _create_transaction(self) -> T:
         raise NotImplementedError
